@@ -1,7 +1,7 @@
 {
   "name": "scrapp-auth",
   "version": "1.0.0",
-  "description": "authentication and authorization microservice",
+  "description": "Authentication and authorization Microservice",
   "main": "app.js",
   "scripts": {
     "start": "server/www",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:GetColors/scrapp-auth.git"
   },
-  "author": "Camilo Alaniz, José Gutierrez",
+  "author": "Camilo Alaniz, José Gutiérrez",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "git@github.com:GetColors/scrapp-auth/issues"
   },
-  "homepage": "",
+  "homepage": "git@github.com:GetColors/scrapp-auth#readme",
   "dependencies": {
     "axios": "^0.19.0",
     "bcryptjs": "^2.4.3",

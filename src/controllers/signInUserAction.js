@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken');
+const config = require('./../config');
 const validator = require('./../validations/validator');
 const { validationErrors } = require('./../errors/errors');
+const jwtAuthAdapter = require('./../adapters/jwtAuthAdapter');
 const userRepository = require('./../repositories/userRepository');
 const LoginUserService = require('./../services/LoginUserService');
 const cryptographyAdapter = require('../adapters/cryptographyAdapter');
@@ -34,7 +35,7 @@ module.exports = async (request, response) => {
 
   response.status(201).json({
     data: {
-      token: jwt.sign(authenticatedUser, process.env.jwt_secret, {expiresIn: process.env.jwt_expiration})
+      token: jwtAuthAdapter.generateToken(authenticatedUser, config.secret, config.expiration)
     }
   });
 };

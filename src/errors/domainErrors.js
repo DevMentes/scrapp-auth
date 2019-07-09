@@ -16,7 +16,17 @@ const BadCredentials = (email, password) => {
   }
 };
 
+const IncorrectPassword = (password) => {
+  return {
+    error: {
+      message: 'Entered password is incorrect. Given ' + password,
+      code: 2002
+    }
+  }
+};
+
 module.exports = {
   EmailAlreadyExists,
-  BadCredentials
+  BadCredentials,
+  IncorrectPassword
 };
